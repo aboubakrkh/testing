@@ -6,13 +6,13 @@ RUN go get gopkg.in/mgo.v2
 RUN go get github.com/gorilla/mux
 
 # copy the local package files to the container workspace
-ADD . /go/src/github.com/sarataha/cinema/users
+ADD . /go/src/github.com/sarataha/cinema-to-go/users
 
 # Setting up working directory
-WORKDIR /go/src/github.com/sarataha/cinema/users
+WORKDIR /go/src/github.com/sarataha/cinema-to-go/users
 
 # Build the users command inside the container.
-RUN go install github.com/sarataha/cinema/users
+RUN go install github.com/sarataha/cinema-to-go/users
 
 # Run the users microservice when the container starts.
 ENTRYPOINT /go/bin/users
