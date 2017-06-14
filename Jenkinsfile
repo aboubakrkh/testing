@@ -1,14 +1,13 @@
-   node {
+node {
     def app
 
     stage('Clone repository') {
-       
         checkout scm
     }
 
     stage('Build image') {
 
-     app = docker.build("aboubakr/node2")
+        app = docker.build("aboubakr/node")
 
 
     }
@@ -31,4 +30,3 @@
         }
     }
 }
-
