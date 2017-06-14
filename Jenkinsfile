@@ -14,10 +14,10 @@ node {
     }
 
      stage('Test image') {
-        app.inside {
+       
 	   sh 'echo "tests passed"'
            /* sh 'curl http://127.0.0.1:8000 || exit 1'*/
-        }
+        
     }   
 
     stage('Push image') {
