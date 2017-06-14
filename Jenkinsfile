@@ -6,8 +6,9 @@ node {
     }
 
     stage('Build image') {
-
-        app = docker.build("aboubakr/node")
+	
+	sh 'docker-compose up -d '
+       /* app = docker.build("aboubakr/node")*/
 
 
     }
