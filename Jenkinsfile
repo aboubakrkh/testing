@@ -8,7 +8,7 @@
 
     stage('Build image') {
 
-        sh "docker-compose up -d"
+     app = docker.build("aboubakr/node2")
 
 
     }
