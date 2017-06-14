@@ -2,7 +2,7 @@
     def app
 
     stage('Clone repository') {
-        git clone https://github.com/sarataha/cinema-to-go.git/
+       
         checkout scm
     }
 
